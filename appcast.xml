@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Yota Updates</title>
+        <item>
+            <title>Yota v2.0.0 发布</title>
+            <sparkle:version>26</sparkle:version>
+            <sparkle:shortVersionString>2.0.0</sparkle:shortVersionString>
+            <description>
+                <![CDATA[
+                <h2>2.0.0</h2>
+                <ul>
+                    <li><b>书签 2.0</b>：支持拖拽排序、私密模式及多标签智能补全。</li>
+                    <li><b>视觉进化</b>：全面重构 UI 组件库，适配弹簧动画反馈与全局主题切换。</li>
+                    <li><b>翻译稳定性增强</b>：引入多节点轮询与弹性请求机制，显著提升查词成功率。</li>
+                    <li><b>深度解析优化</b>：JSON 精度保护、512层解析防御以及更精准的时间分析。</li>
+                    <li><b>全新集成 Sparkle 2.0</b>：支持全自动后台更新，中文体验更佳。</li>
+                </ul>
+                ]]>
+            </description>
+            <enclosure url="https://github.com/chengu61/Yota/releases/download/v2.0.0/Yota_v2.0.0.dmg"
+                       sparkle:version="26"
+                       sparkle:shortVersionString="2.0.0"
+                       sparkle:os="macos"
+                       length="4469159"
+                       type="application/octet-stream"
+                       sparkle:edSignature="c+2ihhKULta4ycwhuZZpSsJvcduIJv85yPAXtLifasjkVZb4XTWjBqsU4lr7Kmw+kabn9tBG78a6woyWr59rBA=="/>
+        </item>
+    </channel>
+</rss>

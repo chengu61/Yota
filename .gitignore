@@ -1,0 +1,49 @@
+# macOS
+.DS_Store
+.idea
+
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## User settings
+xcuserdata/
+
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.text
+*.pbuser
+*.xccheckout
+*.xcscmblueprint
+*.xccheckout
+*.xcuserstate
+
+## DerivedData
+DerivedData/
+build/
+
+## Xcode Patch
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+
+## Swift Package Manager
+.build/
+.swiftpm/
+
+# Logs
+logs
+*.log
+
+# Sparkle Tools
+sparkle.tar.xz
+sparkle_tools/
+
+# Binaries
+*.dmg
+*.app
+*.zip
