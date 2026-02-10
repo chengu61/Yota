@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./docs/icon.png" width="120" height="120" alt="Yota Icon" />
 
-  <h1>Yota v2.0</h1>
+  <h1>Yota v2.1</h1>
 
   <p>
     <strong>macOS 开发者生产力工具箱 | 原生 · 极速 · 智能</strong>
@@ -16,7 +16,7 @@
     <img src="https://img.shields.io/badge/Platform-macOS%2012.0%2B-blue?style=flat-square" alt="Platform" />
     <img src="https://img.shields.io/badge/Swift-5.0-orange?style=flat-square" alt="Swift" />
     <a href="https://github.com/chengu61/Yota/releases/latest">
-      <img src="https://img.shields.io/badge/Download-Latest%20Release-brightgreen?style=flat-square&logo=github" alt="Download" />
+      <img src="https://img.shields.io/github/v/release/chengu61/Yota?label=Download&style=flat-square&logo=github&color=brightgreen" alt="Download" />
     </a>
   </p>
 
@@ -31,9 +31,17 @@ Yota 是一款专为 macOS 开发者设计的轻量级工具箱。它常驻于 M
 
 ---
 
-## ✨ 全量功能指南
+### 生成工具 [NEW]
+强大的模拟数据构造中心，支持高度定制化的复杂数据生成：
+- **核心引擎**: 支持 `{{variable}}` 模板语法，满足高度定制化需求。
+- **高效录入**: 模板编辑器支持 `{{` 触发自动补全；支持将变量**快速插入**至光标当前位置。
+- **智能重构**: 修改变量名时模板引用 **自动同步**；支持 `cmd+点击` 实现模板与定义间的 **快速溯源**。
+- **数据源丰富**: 内置正则、逻辑脚本、Mock 数据及自定义列表，支持 String/Number/Date 等基础类型。
+- **多格式导出**: 支持 **JSON**、**CSV**、**SQL Insert** 等主流格式，并支持生成方案的本地持久化。
 
-### 1. JSON 深度处理中心
+<img src="./docs/generator.png" width="600" alt="Generator Tool Preview" />
+
+### JSON 处理工具
 支持从简单的格式化到复杂的架构分析全流程：
 - **核心操作**: 极速 **格式化/压缩**；支持 **Unicode 与中文** 互转。
 - **有序解析**: 自研解析引擎，支持自定义 **缩进 (2/4)** 与 **键值排序** (默认/正序/倒序)。
@@ -43,8 +51,9 @@ Yota 是一款专为 macOS 开发者设计的轻量级工具箱。它常驻于 M
 
 <img src="./docs/json.png" width="600" alt="JSON Tool Preview" />
 
-### 2. 多功能文本工具箱
+### 多功能文本工具箱
 集成了数十种日常开发高频使用的文本处理能力：
+- **分割与合并 [NEW]**: **智能双向转换**。单行按高频字符（逗号、分号等）自动分割，多行按空格一键合并。
 - **行级操作**: 排序（升序/降序/数字识别）、去重、去除空行/首尾空格。
 - **清洗与过滤**: 一键移除符号、清洗身份证号敏感行等。
 - **数学与统计**: 支持对数字行进行 **求和计算**；提供字数、字节数实时统计。
@@ -52,7 +61,7 @@ Yota 是一款专为 macOS 开发者设计的轻量级工具箱。它常驻于 M
 - **文本转换**: 中英文标点互转、简繁体互转、编码转换。
 - **编辑器**: 内置高性能代码高亮编辑器，支持原生查找替换与 **自动换行** 切换。
 
-### 3. 时间与日期分析
+### 时间与日期分析
 涵盖从时间戳转换到复杂推算的完整链路：
 - **全格式互转**: 秒/毫秒/微秒/纳秒时间戳与标准日期秒级互转。
 - **智能解析**: 识别 ISO8601、yyyyMMdd 等 40+ 种格式。
@@ -63,11 +72,11 @@ Yota 是一款专为 macOS 开发者设计的轻量级工具箱。它常驻于 M
 
 <img src="./docs/time.png" width="600" alt="Time Tool Preview" />
 
-### 4. 查词与深度翻译
+### 查词与深度翻译
 - **弹性检索**: 多节点轮询机制，确保请求的高度稳定性。
 - **智能融合**: 自动纠偏拼音，合并碎片化释义并保留完整词性说明。
 
-### 5. 原生快捷书签
+### 快捷书签
 代码片段与常用指令的私密管理中心：
 - **灵活组织**: 支持 **多标签管理**、标签自动补全 (Ghost Text) 以及 **拖拽重排序**。
 - **隐私模式**: 敏感内容支持 **高斯模糊** 遮盖，通过 `Cmd + 点击` 快速预览。
