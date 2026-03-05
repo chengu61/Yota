@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./docs/icon.png" width="120" height="120" alt="Yota Icon" />
 
-  <h1>Yota v2.1</h1>
+  <h1>Yota v2</h1>
 
   <p>
     <strong>macOS 开发者生产力工具箱 | 原生 · 极速 · 智能</strong>
