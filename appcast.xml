@@ -3,13 +3,13 @@
     <channel>
         <title>Yota Updates</title>
         <item>
-            <title>Yota v2.6.0 发布</title>
-            <sparkle:version>32</sparkle:version>
-            <sparkle:shortVersionString>2.6.0</sparkle:shortVersionString>
+            <title>Yota v2.6.1 发布</title>
+            <sparkle:version>33</sparkle:version>
+            <sparkle:shortVersionString>2.6.1</sparkle:shortVersionString>
             <description>
                 <![CDATA[
-                <h2>2.6.0</h2>
-                <ul>
+                <h2>2.6.1</h2>
+                <ul style="padding-left: 18px; margin-top: 8px;">
                   <li>全新上线自动化脚本工具，支持本地多语言脚本接入。</li>
                   <li>JSON 工具新增多段提取与导航功能，可在混合文本中定位合法的 JSON 内容。</li>
                   <li>文本工具新增数据分列功能，支持自动识别并提取多列文本。</li>
@@ -19,13 +19,13 @@
                 </ul>
                 ]]>
             </description>
-            <enclosure url="https://github.com/chengu61/Yota/releases/download/v2.6.0/Yota_v2.6.0.dmg"
-                       sparkle:version="32"
-                       sparkle:shortVersionString="2.6.0"
+            <enclosure url="https://github.com/chengu61/Yota/releases/download/v2.6.1/Yota_v2.6.1.dmg"
+                       sparkle:version="33"
+                       sparkle:shortVersionString="2.6.1"
                        sparkle:os="macos"
-                       length="8126374"
+                       length="8126974"
                        type="application/octet-stream"
-                       sparkle:edSignature="jB0059Iu5ItKJOxA2xmNCJKJoRs0M00O0Gwyl5pNF1P4FdEXu5icFqIgnE7XM/kPcXx6CX+ypAI06cyb05/QDw=="/>
+                       sparkle:edSignature="cxrgkIaa4XQaA7EO1K1f4GU05/jeq4IHghFmbUf2nmrswBvV3bnNdn69XCP0N4mORt30DrxK/JWS1tolynKmAQ=="/>
         </item>
     </channel>
 </rss>
