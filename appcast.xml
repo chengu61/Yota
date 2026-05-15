@@ -3,29 +3,30 @@
     <channel>
         <title>Yota Updates</title>
         <item>
-            <title>Yota v2.6.1 发布</title>
-            <sparkle:version>33</sparkle:version>
-            <sparkle:shortVersionString>2.6.1</sparkle:shortVersionString>
+            <title>Yota v2.6.2 发布</title>
+            <sparkle:version>34</sparkle:version>
+            <sparkle:shortVersionString>2.6.2</sparkle:shortVersionString>
             <description>
                 <![CDATA[
-                <h2>2.6.1</h2>
+                <h2>2.6.2</h2>
                 <ul style="padding-left: 18px; margin-top: 8px;">
-                  <li>全新上线自动化脚本工具，支持本地多语言脚本接入。</li>
-                  <li>JSON 工具新增多段提取与导航功能，可在混合文本中定位合法的 JSON 内容。</li>
-                  <li>文本工具新增数据分列功能，支持自动识别并提取多列文本。</li>
-                  <li>文本工具新增文本替换功能，支持单次精准替换与全局替换。</li>
-                  <li>时间工具新增时长解析，含秒数及“1d 1小时”等自然语言。</li>
-                  <li>性能与体验优化、已知问题修复。</li>
+                  <li>JSON 工具新增配置项，支持自定义识别到纯数组内容时是否跳转。</li>
+                  <li>脚本工具运行页面新增“在 Finder 中显示”按钮。</li>
+                  <li>优化时间工具解析能力，支持识别更多样的时间格式。</li>
+                  <li>优化 JSON 识别算法，通过上下文扫描显著降低误识别率。</li>
+                  <li>优化翻译工具对标识符的处理逻辑，提升翻译体验。</li>
+                  <li>修复脚本运行结束后引发的高 CPU 占用的问题。</li>
+                  <li>修复特定场景下 JSON 识别规则导致解析错误的问题。</li>
                 </ul>
                 ]]>
             </description>
-            <enclosure url="https://github.com/chengu61/Yota/releases/download/v2.6.1/Yota_v2.6.1.dmg"
-                       sparkle:version="33"
-                       sparkle:shortVersionString="2.6.1"
+            <enclosure url="https://github.com/chengu61/Yota/releases/download/v2.6.2/Yota_v2.6.2.dmg"
+                       sparkle:version="34"
+                       sparkle:shortVersionString="2.6.2"
                        sparkle:os="macos"
-                       length="8126974"
+                       length="8131847"
                        type="application/octet-stream"
-                       sparkle:edSignature="cxrgkIaa4XQaA7EO1K1f4GU05/jeq4IHghFmbUf2nmrswBvV3bnNdn69XCP0N4mORt30DrxK/JWS1tolynKmAQ=="/>
+                       sparkle:edSignature="bnpw4KAJUua0SN9lQb5yGQ1feMj79w8moOY/i7pPfLWgLd+IEnQxxiLbnOZr9J92XCKPsyW83c+56Zn8Dj/wAg=="/>
         </item>
     </channel>
 </rss>
