@@ -3,28 +3,28 @@
     <channel>
         <title>Yota Updates</title>
         <item>
-            <title>Yota v2.6.3 发布</title>
-            <sparkle:version>35</sparkle:version>
-            <sparkle:shortVersionString>2.6.3</sparkle:shortVersionString>
+            <title>Yota v2.7.0 发布</title>
+            <sparkle:version>36</sparkle:version>
+            <sparkle:shortVersionString>2.7.0</sparkle:shortVersionString>
             <description>
                 <![CDATA[
-                <h2>2.6.3</h2>
+                <h2>2.7.0</h2>
                 <ul style="padding-left: 18px; margin-top: 8px;">
-                  <li>优化 App 文件监听与扫描机制，确保扫描稳定性。</li>
-                  <li>优化 App 图标显示效果，采用高质量缩放插值与抗锯齿处理。</li>
-                  <li>优化书签工具网格视图结构，提升大量书签时的滚动流畅度。</li>
-                  <li>优化设置页面的布局和结构，提升计算性能。</li>
-                  <li>修复在部分特定场景下剪贴板 JSON 识别不准确的问题。</li>
+                  <li>新增对比工具，内置原生高性能引擎，带来长文本极速比对与双列同步滚动体验。</li>
+                  <li>新增快捷公式工具，支持预设自定义变量与逻辑公式，输入参数即可实时求值。</li>
+                  <li>新增路径解析工具，支持在 Finder 中选中文件或文件夹，快速提取详细的路径结构信息。</li>
+                  <li>统一各模块搜索机制，现全面支持中文拼音、首字母与模糊匹配。</li>
+                  <li>重构百宝箱主页，采用全新卡片网格布局，视觉更直观，操作更便捷。</li>
                 </ul>
                 ]]>
             </description>
-            <enclosure url="https://github.com/chengu61/Yota/releases/download/v2.6.3/Yota_v2.6.3.dmg"
-                       sparkle:version="35"
-                       sparkle:shortVersionString="2.6.3"
+            <enclosure url="https://github.com/chengu61/Yota/releases/download/v2.7.0/Yota_v2.7.0.dmg"
+                       sparkle:version="36"
+                       sparkle:shortVersionString="2.7.0"
                        sparkle:os="macos"
-                       length="8141622"
+                       length="6270564"
                        type="application/octet-stream"
-                       sparkle:edSignature="GdQfhQudh1C55GANFi2BCAlkRBh/MRiyrhrXjsw0A4EaFuQgjggc2IqXcpHE+/PBuSJ1Yyx+Txk7upcRTHvkBg=="/>
+                       sparkle:edSignature="2HF6CBy8cvYRUAYiRhVxThadjIM+XXAgi8moC3xUDioSCS0ll5Bb31iKMpVR4d82+l98xTt6DVuFehXUnmsrBA=="/>
         </item>
     </channel>
 </rss>
