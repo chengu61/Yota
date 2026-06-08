@@ -14,7 +14,7 @@
 
   <p>
     <img src="https://img.shields.io/badge/Platform-macOS%2012.0%2B-blue?style=flat-square" alt="Platform" />
-    <img src="https://img.shields.io/badge/Swift-5.0-orange?style=flat-square" alt="Swift" />
+    <img src="https://img.shields.io/badge/Swift-6.0-orange?style=flat-square" alt="Swift" />
     <a href="https://github.com/chengu61/Yota/releases/latest">
       <img src="https://img.shields.io/github/v/release/chengu61/Yota?label=Download&style=flat-square&logo=github&color=brightgreen" alt="Download" />
     </a>
@@ -65,9 +65,10 @@ Yota 是一款专为 macOS 开发者设计的轻量级工具箱。它常驻于 M
 
 低频但刚需的小工具聚合中心：
 
-- **路径解析** [NEW]: 在 Finder 中选中文件/文件夹，快速提取目录、文件名及扩展名等结构信息。
-- **快捷公式** [NEW]: 预设自定义变量与公式，输入参数即可实时计算结果。
-- **编码转换**: Base64、URL、Unicode 的极速加解密。
+- **二维码** [NEW]: 支持生成并复制/保存二维码；支持剪贴板粘贴、路径及拖拽图片，采用双引擎智能解码识别。
+- **路径解析**: 在 Finder 中选中文件/文件夹，快速提取目录、文件名及扩展名等结构信息。
+- **快捷公式**: 预设自定义变量与公式，输入参数即可实时计算。支持大数高精度计算，提供内置辅助函数速查面板。
+- **编码转换**: 支持 Base64、URL、Unicode 等多种格式的快速一键编解码。
 - **CRON 预览**: 直观解析 Crontab 表达式的执行周期。
 - **进制互转**: 完美支持 2 / 8 / 10 / 16 进制之间的快捷切换。
 - **随机实验室**: 多维度生成 UUID、高强度随机字符串及数字。
@@ -135,6 +136,7 @@ Yota 是一款专为 macOS 开发者设计的轻量级工具箱。它常驻于 M
 
 代码片段与常用指令的私密管理中心：
 
+- **嵌套引用与联想**: 支持通过 `{{书签标题}}` 嵌套引用其他书签，重命名自动同步更新，支持联想提示与语法高亮。
 - **灵活组织**: 支持 **多标签管理**、标签自动补全 (Ghost Text) 以及 **拖拽重排序**。
 - **隐私模式**: 敏感内容支持 **高斯模糊** 遮盖，通过 `Cmd + 点击` 快速预览。
 - **操作优化**: 点击复制书签后 **窗口自动关闭**，提供更连贯的交互体验。
