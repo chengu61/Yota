@@ -5,7 +5,7 @@
 
   <p><strong>Copy to recognize. Turn scripts into tools.</strong></p>
 
-  <p>A native menu bar productivity utility for clipboard recognition and cross-app workflows, with fast processing for text, JSON, images, and time data.</p>
+  <p>A native menu bar productivity utility for clipboard history, content recognition, and cross-app workflows, with fast processing for text, JSON, images, and time data.</p>
 
   <p>
     <img src="https://img.shields.io/badge/macOS-12.0%2B-111111?style=flat-square&logo=apple" alt="Requires macOS 12.0 or later" />
@@ -35,7 +35,25 @@
 
 Press `Shift + Space` by default, or click the menu bar icon, to open Yota. The interface is available in Simplified Chinese and English, and you can switch languages instantly in Settings. You can also change the shortcut, reorder or hide tools, and switch between workspaces without losing their content or state.
 
-## Clipboard and Cross-App Workflows
+## Clipboard History and Quick Access
+
+Press `Cmd + Shift + V` or open Clipboard from Toolbox to find and reuse previously copied content.
+
+- Store text, links, rich text, and images locally, with category search, previews, and reorderable favorites.
+- Double-click or press `Return` to use a record; press `Cmd + Return` for plain text.
+- Copy selected text from previews, send text to tools such as JSON, Compare, or Translate, or save it as a bookmark.
+- Send images to Compression, Format Conversion, OCR, Editing, and other image tools.
+- Use bookmarks directly, with full-text, line-by-line, or paragraph-by-paragraph pasting.
+
+Auto-paste requires Accessibility permission. Without it, you can still copy and paste manually.
+
+<div align="center">
+  <a href="./docs/clipboard.png">
+    <img src="./docs/clipboard.png" width="520" alt="Yota clipboard history" />
+  </a>
+</div>
+
+## Automatic Clipboard Recognition
 
 Yota can recognize clipboard content in the background. Its matching rules are deliberately strict to prevent ordinary numbers, order IDs, and code fragments from opening tools unexpectedly.
 
@@ -45,12 +63,14 @@ Yota can recognize clipboard content in the background. Its matching rules are d
 - Repeated copies of identical content can be ignored. Background recognition pauses while you are interacting with Yota.
 - Time, JSON, and Compare monitoring can each be disabled. Hiding a tool also disables its corresponding monitor.
 
+Recognition and history recording have separate controls; pausing recognition does not stop recording.
+
 ## Bookmarks
 
 Bookmarks can split content by line or paragraph. Click a bookmark once, then press `Cmd + V` repeatedly in a browser, terminal, or another app. Yota prepares the next segment after each paste.
 
 - Four click actions: copy all, copy line by line, copy paragraph by paragraph, or edit.
-- Separate content from notes with a blank line. Notes are excluded from the sequential paste queue.
+- Separate content from notes with two blank lines. Notes are excluded from the sequential paste queue.
 - Reference another bookmark with <code>&#123;&#123;Bookmark Title&#125;&#125;</code>, with circular-reference detection.
 - Renaming a bookmark updates references to it in other bookmarks.
 - Grid and list views, multiple tags, tag autocomplete, Pinyin search, and drag-and-drop ordering.
@@ -65,13 +85,13 @@ Automatic clipboard advancement requires Accessibility permission. Without permi
 - **Format Conversion**: Batch-convert between PNG, JPEG, WebP, HEIC, and other formats, with quality controls, previews, and batch export.
 - **OCR**: Use macOS Vision to recognize Simplified Chinese, Traditional Chinese, and English locally, with image scaling, contrast preprocessing, segmented results, and full-text copy.
 - **Base64**: Convert images to and from Base64, with optional Data URI prefixes, live preview, and restored-image export.
-- **Editing**: Subject extraction, mask erase and restore, crop, rotate, flip, canvas zoom, brush, shapes, arrows, blur, and pixelation, with undo and redo.
+- **Editing**: Subject extraction, brush or rectangular erase and restore, crop, rotate, flip, canvas zoom, drawing, shapes, arrows, blur, and pixelation, with undo and redo.
 - **Metadata**: Inspect dimensions, color space, camera, exposure, GPS, and other EXIF data, then remove metadata from one or multiple images before saving copies.
 
 ## Compare
 
-- Myers diff and anchor-based divide-and-conquer algorithms optimized for large text, with differences computed in the background.
-- Physically aligned line heights and synchronized scrolling between the two panes.
+- Use **Latest two** to load and compare the two most recent distinct texts from clipboard history.
+- Aligned text and synchronized scrolling between the two panes.
 - Line-, word-, and character-level differences shown together.
 - A diff minimap shows the overall distribution and supports click-and-drag navigation.
 - Search, difference counts, previous/next difference navigation, and swapping the two inputs.
@@ -112,11 +132,10 @@ See the in-app Script Development Guide for the script format and host applicati
 - Extract multiple valid JSON segments from logs, API responses, and other mixed text, then switch between segments.
 - Filter false positives using content ratios and surrounding code context, with a separate option for recognizing standalone arrays.
 - Recursively parse JSON stored inside strings, including content with multiple layers of escaping.
-- Preserve input key order with an ordered parser, or sort ascending or descending and choose 2- or 4-space indentation.
+- Preserve the original key order, or sort by key and adjust indentation.
 - Format, minify, extract, escape and unescape, convert Unicode and octal escapes, and convert Excel TSV to JSON.
 - Preserve long Excel numbers as strings to avoid precision loss.
 - Browse as a tree, expand and collapse nodes, track paths, search, and switch between horizontal and vertical layouts.
-- Protect against excessive nesting and locate syntax errors by character offset.
 
 <div align="center">
   <a href="./docs/json.png">
@@ -127,7 +146,7 @@ See the in-app Script Development Guide for the script format and host applicati
 ## Text
 
 - Keep or exclude text using multiple conditions: contains, regex, starts with, ends with, exact match, AND/OR logic, and case sensitivity.
-- Detect delimiters automatically and generate a sample preview; select columns by dragging and customize the output separator.
+- Smart Split detects delimiters, previews sample rows, and lets you drag across columns to select them or drag their handles to reorder them. Extract in the selected order with a custom output separator.
 - Add or remove prefixes and suffixes in batches, split a single line intelligently, or join multiple lines.
 - Sort as text or numbers, shuffle, reverse, deduplicate, remove blank lines or whitespace, and clean symbols.
 - Generate SQL `IN` parameters with quoting and automatic deduplication.
@@ -155,7 +174,6 @@ See the in-app Script Development Guide for the script format and host applicati
 ## Apps
 
 - Scan system and user application folders and monitor installs, updates, and removals.
-- Cache and retry temporarily incomplete bundles and icons while apps are being replaced during updates.
 - Search with full Pinyin, Pinyin initials, heteronyms, and fuzzy matching; click an app to launch it.
 - Reorder or hide apps and adjust icon size.
 - Deep uninstall checks caches, preferences, containers, WebKit data, plugins, LaunchAgents, LaunchDaemons, and related binaries.
@@ -169,10 +187,11 @@ See the in-app Script Development Guide for the script format and host applicati
 - Number sequences, random numbers, UUIDs, random strings, date and time, reverse regex generation, JavaScript expressions, custom lists, and network information.
 - Fields can reference earlier fields to generate related data.
 - Preview plain text, JSON, CSV, and SQL Insert output in real time.
-- Save, copy, import, and export presets, and generate up to 99,999 records.
+- Save, copy, import, and export presets.
 
 ## Toolbox
 
+- **Clipboard**: Open Quick Access to search, preview, and use saved clipboard history and bookmarks.
 - **Quick Formula**: Save expressions or complete JavaScript rules, with scalar and JSON input, live evaluation, BigInt, and helpers for MD5, SHA, CRC32, Base64, and more. Supports JSON import and export.
 - **Path Resolution**: Read the current Finder selection automatically; inspect paths, timestamps, thumbnails, hashes, text, and media metadata; analyze directory usage; copy paths in several formats; and open items in Finder or Terminal.
 - **Encoding**: Unicode, URL, Base64, Hex, Hex Escape, Octal Escape, Binary, HTML Entity, string escaping, hashes, and JWT.
@@ -205,11 +224,13 @@ xattr -rd com.apple.quarantine "/Applications/Yota.app"
 
 ## Data and Permissions
 
-Settings, bookmarks, formulas, generator presets, and script-library configuration are stored locally. Image, text, JSON, time, file analysis, and OCR features also process data locally. Private bookmark content is only hidden in the interface and is not stored with encryption.
+Settings, clipboard history, bookmarks, formulas, generator presets, and script-library configuration are stored locally. Image, text, JSON, time, file analysis, and OCR features also process data locally. Clipboard history is not encrypted. Private bookmark content is only hidden in the interface and is not encrypted either.
+
+Clipboard history is enabled by default and excludes file copies and multi-item copies. Content with privacy markers, private bookmarks copied through Yota, and automatically copied results are skipped. Other sensitive text may be recorded; pause recording or exclude apps as needed.
 
 Translate sends the text being translated to third-party services. QR recognition downloads an image when given a remote image URL. Clicking GPS coordinates in image metadata opens Apple Maps. Automatic updates download release information and installation packages but do not send system configuration data. If the local PNG compression engine is missing, Yota can download it when requested; images are never uploaded. Scripts added by the user may access the network or file system according to their own implementation.
 
-Sequential bookmark pasting requires optional Accessibility permission. Reading the current Finder selection and opening paths in Terminal use Apple Events. Yota does not run in the App Sandbox because it supports script execution, application management, and cross-app workflows.
+Clipboard auto-paste and sequential bookmark pasting require optional Accessibility permission. Recording, searching, and copying history do not require it. Reading the current Finder selection and opening paths in Terminal use Apple Events. Yota does not run in the App Sandbox because it supports script execution, application management, and cross-app workflows.
 
 ## Feedback
 
